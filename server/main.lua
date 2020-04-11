@@ -11,7 +11,7 @@ ESX.RegisterServerCallback('Scully:CanStartRobbery', function(source, cb)
 	    cb(true)
 	else
 	    cb(false)
-		xPlayer.ahowNotification(Config.Timer.alertmessage)
+		xPlayer.showNotification(Config.Timer.alertmessage)
 	end
 end)
 
