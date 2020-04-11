@@ -1,5 +1,4 @@
-     
-            Global Robbery Timer                
+**Global Robbery Timer**                
 	  
 	  
 es_extended is required for this script to work correctly, I will not assist you with integrating this into your robberies you can find notes next to everything within the script which I recommend you read.	  
