@@ -25,9 +25,9 @@ AddEventHandler("Scully:StartTimer", function()
 end)
 
 RegisterServerEvent("Scully:StartCustomTimer")
-AddEventHandler("Scully:StartCustomTimer", function(cooldown)
+AddEventHandler("Scully:StartCustomTimer", function(cooldowntime)
     cooldown = true
-    SetTimeout((cooldown*60)*1000, function()
+    SetTimeout((cooldowntime*60)*1000, function()
 		cooldown = false
 		TimerHasEnded()
 	end)
