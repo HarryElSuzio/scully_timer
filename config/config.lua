@@ -1,4 +1,4 @@
--- Created by Scully#5775
+-- Created by Scully#5775 - https://discord.gg/eNtGFS6
 
 -- MAKE SURE YOU READ THE DAMN "READ ME" OR I WILL COME TO YOUR HOUSE AND SLAP YOU!
 
