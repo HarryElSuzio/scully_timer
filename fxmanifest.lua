@@ -1,3 +1,5 @@
+-- Created by Scully#5775 - https://discord.gg/eNtGFS6
+
 fx_version 'adamant'
 
 game 'gta5'
