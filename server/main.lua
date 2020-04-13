@@ -1,4 +1,4 @@
--- Created by Scully#5775
+-- Created by Scully#5775 - https://discord.gg/eNtGFS6
 
 ESX = nil
 local cooldown = false
