@@ -24,11 +24,11 @@ To start the global timer you can do it in one of two ways, you can use the defa
     
 *Custom timer client sided:
 
-    TriggerServerEvent("Scully:StartCustomTimer", 20) -- 20 is an example you can set this to any number. (in minutes)
+    TriggerServerEvent("Scully:StartTimer", 20) -- 20 is an example you can set this to any number. (in minutes)
    
 *Custom timer server sided:
 
-    TriggerEvent("Scully:StartCustomTimer", 20) -- 20 is an example you can set this to any number. (in minutes)
+    TriggerEvent("Scully:StartTimer", 20) -- 20 is an example you can set this to any number. (in minutes)
     
 To reset the timer you can use:
 
