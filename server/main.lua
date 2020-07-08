@@ -6,28 +6,23 @@ local cooldown = false
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 ESX.RegisterServerCallback('Scully:CanStartRobbery', function(source, cb)
-    local xPlayer = ESX.GetPlayerFromId(source)
-	if cooldown == false then
+	local xPlayer = ESX.GetPlayerFromId(source)
+	if xPlayer and not cooldown then
 	    cb(true)
 	else
+	    xPlayer.showNotification(Config.Timer.alertmessage)
 	    cb(false)
-		xPlayer.showNotification(Config.Timer.alertmessage)
 	end
 end)
 
 RegisterServerEvent("Scully:StartTimer")
-AddEventHandler("Scully:StartTimer", function()
+AddEventHandler("Scully:StartTimer", function(cooldowntime)
+    local cooldowntimer = Config.Timer.cooldown
+	if cooldowntime ~= nil and cooldowntime > 0 then 
+		cooldowntimer = cooldowntime 
+	end
     cooldown = true
-    SetTimeout((Config.Timer.cooldown*60)*1000, function()
-		cooldown = false
-		TimerHasEnded()
-	end)
-end)
-
-RegisterServerEvent("Scully:StartCustomTimer")
-AddEventHandler("Scully:StartCustomTimer", function(cooldowntime)
-    cooldown = true
-    SetTimeout((cooldowntime*60)*1000, function()
+    SetTimeout((cooldowntimer*60000), function()
 		cooldown = false
 		TimerHasEnded()
 	end)
@@ -48,10 +43,3 @@ function TimerHasEnded()
 		end
 	end
 end
-
-AddEventHandler('onResourceStart', function(resource)
-	if resource ~= 'scully_timer' then	
-	    return
-	end
-    print('^2GLOBAL BANK TIMER HAS BEEN STARTED')
-end)
